@@ -49,6 +49,34 @@ After cleaning the dataset, SQL queries were used to explore:
 - Top 5 industries by layoffs for each year
 - Top 5 countries by layoffs for each year
 
+## Key Analysis & Results
+
+> Add the matching screenshots from the `screenshots` folder using the filenames you uploaded to GitHub.
+
+### Monthly Layoffs and Rolling Total
+
+![Monthly Layoffs and Rolling Total](screenshots/rolling_total.png)
+
+This analysis examines monthly layoffs and uses a CTE with a window function to calculate the cumulative number of layoffs over time.
+
+### Top 5 Companies by Layoffs Each Year
+
+![Top 5 Companies by Year](screenshots/top_companies_by_year.png)
+
+CTEs and `DENSE_RANK()` were used to rank companies by total layoffs within each year.
+
+### Layoffs by Industry
+
+![Layoffs by Industry](screenshots/layoffs_by_industry.png)
+
+This analysis compares total layoffs across industries to identify which industries recorded the highest total layoffs in the dataset.
+
+### Layoffs by Country
+
+![Layoffs by Country](screenshots/layoffs_by_country.png)
+
+This analysis compares total layoffs across countries in the dataset.
+
 ## SQL Concepts Demonstrated
 
 - SELECT
@@ -67,6 +95,18 @@ After cleaning the dataset, SQL queries were used to explore:
 
 ## Repository Structure
 
+```text
+global-layoffs-sql-analysis/
+├── raw_data/
+├── screenshots/
+├── README.md
+├── data_cleaning.sql
+├── exploratory_data_analysis.sql
+└── layoffs_cleaned.csv
+```
+
+- `raw_data/` - Original dataset before cleaning
+- `screenshots/` - Selected SQL query outputs used in this README
 - `data_cleaning.sql` - SQL queries used to clean and standardize the dataset
 - `exploratory_data_analysis.sql` - SQL queries used for exploratory analysis
 - `layoffs_cleaned.csv` - Cleaned dataset used for analysis
