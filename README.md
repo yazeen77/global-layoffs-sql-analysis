@@ -51,32 +51,41 @@ After cleaning the dataset, SQL queries were used to explore:
 
 ## Key Analysis & Results
 
-> Add the matching screenshots from the `screenshots` folder using the filenames you uploaded to GitHub.
+### 1. Total Layoffs by Company
 
-### Monthly Layoffs and Rolling Total
+![Layoffs by Company](screenshots/layoffs_by_company.png)
 
-![Monthly Layoffs and Rolling Total](screenshots/rolling_total.png)
+This analysis aggregates total layoffs by company to identify which companies recorded the highest number of layoffs in the dataset.
 
-This analysis examines monthly layoffs and uses a CTE with a window function to calculate the cumulative number of layoffs over time.
-
-### Top 5 Companies by Layoffs Each Year
-
-![Top 5 Companies by Year](screenshots/top_companies_by_year.png)
-
-CTEs and `DENSE_RANK()` were used to rank companies by total layoffs within each year.
-
-### Layoffs by Industry
+### 2. Total Layoffs by Industry
 
 ![Layoffs by Industry](screenshots/layoffs_by_industry.png)
 
-This analysis compares total layoffs across industries to identify which industries recorded the highest total layoffs in the dataset.
+This analysis compares total layoffs across industries to identify which industries were most affected.
 
-### Layoffs by Country
+### 3. Total Layoffs by Country
 
 ![Layoffs by Country](screenshots/layoffs_by_country.png)
 
-This analysis compares total layoffs across countries in the dataset.
+This analysis aggregates layoffs by country to examine the geographic distribution of layoffs within the dataset.
 
+### 4. Monthly Layoffs and Rolling Total
+
+![Monthly Layoffs and Rolling Total](screenshots/rolling_total.png)
+
+Monthly layoffs were aggregated using a CTE, followed by a window function to calculate the cumulative total of layoffs over time.
+
+### 5. Top 5 Companies by Layoffs Each Year
+
+![Top 5 Companies by Year](screenshots/top_companies_by_year.png)
+
+CTEs and `DENSE_RANK()` were used to rank companies by total layoffs within each year and identify the top five companies annually.
+
+### 6. Top 5 Industries by Layoffs Each Year
+
+![Top 5 Industries by Year](screenshots/top_industries_by_year.png)
+
+Layoffs were aggregated by industry and year, then ranked using `DENSE_RANK()` to identify the five industries with the highest total layoffs for each year.
 ## SQL Concepts Demonstrated
 
 - SELECT
